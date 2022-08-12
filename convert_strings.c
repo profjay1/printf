@@ -1,13 +1,13 @@
 #include "main.h"
 
 unsigned int convert_s(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_S(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_r(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_R(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned char flags, int wid, int prec, unsigned char len);
 
 /**
  * convert_s - Converts an argument to a string and
@@ -22,7 +22,7 @@ unsigned int convert_R(va_list args, buffer_t *output,
  * Return: The number of bytes stored to the buffer.
  */
 unsigned int convert_s(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+unsigned char flags, int wid, int prec, unsigned char len)
 {
 	char *str, *null = "(null)";
 	int size;
@@ -69,7 +69,7 @@ unsigned int convert_s(va_list args, buffer_t *output,
  *              are stored as \x followed by the ASCII code value in hex.
  */
 unsigned int convert_S(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+unsigned char flags, int wid, int prec, unsigned char len)
 {
 	char *str, *null = "(null)", *hex = "\\x", zero = '0';
 	int size, index;
@@ -118,7 +118,7 @@ unsigned int convert_S(va_list args, buffer_t *output,
  * Return: The number of bytes stored to the buffer.
  */
 unsigned int convert_r(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+unsigned char flags, int wid, int prec, unsigned char len)
 {
 	char *str, *null = "(null)";
 	int size, end, i;
@@ -162,7 +162,7 @@ unsigned int convert_r(va_list args, buffer_t *output,
  * Return: The number of bytes stored to the buffer.
  */
 unsigned int convert_R(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+unsigned char flags, int wid, int prec, unsigned char len)
 {
 	char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char *rot13 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
